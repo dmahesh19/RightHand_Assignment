@@ -1,0 +1,32 @@
+{
+    "name": "@types/lodash.pickby",
+    "version": "4.6.7",
+    "description": "TypeScript definitions for lodash.pickBy",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash.pickby",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Brian Zengel",
+            "url": "https://github.com/bczengel",
+            "githubUsername": "bczengel"
+        },
+        {
+            "name": "Ilya Mochalov",
+            "url": "https://github.com/chrootsu",
+            "githubUsername": "chrootsu"
+        }
+    ],
+    "main": "",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/lodash.pickby"
+    },
+    "scripts": {},
+    "dependencies": {
+        "@types/lodash": "*"
+    },
+    "typesPublisherContentHash": "90dc6ae9a5963ac640870cec92e8782db4ff1cec0af429f111f7e71e72dde49c",
+    "typeScriptVersion": "3.9"
+}

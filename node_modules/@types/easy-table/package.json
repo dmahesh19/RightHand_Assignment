@@ -1,0 +1,13 @@
+{
+    "name": "@types/easy-table",
+    "version": "1.2.0",
+    "typings": null,
+    "description": "Stub TypeScript definitions entry for easy-table, which provides its own types definitions",
+    "main": "",
+    "scripts": {},
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "easy-table": "*"
+    }
+}

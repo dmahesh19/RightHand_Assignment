@@ -1,0 +1,62 @@
+# README
+
+### What is this repository for?
+
+-   Automation Test Suite for Right Hand Assignment 
+
+---
+---
+
+### Prerequisites
+
+```
+This project is build on NodeJS platform
+So the expectations are npm should be installed
+
+https://nodejs.org/en/download/
+
+PLease pick the compatible package based on the Operationg System
+
+```
+
+
+### How do I get set up?
+
+Install dependencies
+
+```sh
+npm install
+```
+
+To run the tests in your local machine
+
+```sh
+npm run test
+```
+
+### Technologies
+
+-   WebdriverIO used as Automation Tool
+-   CucumberJS used for Automation Framework
+-   Axios used to cover API Automation
+
+
+### Framework Structure
+
+-   features folder with have test scenarios written in gherkin language (Given, When Then) format
+-   step-definitions will be having the actual automation scripts mapped with tests steps in features folder
+-   pageobjects will be having the web element and associated methods 
+-   reports will be having JSON and HTML test results
+-   conig folder will contains the configuration for entite test automatino suite
+
+
+### How to see HTML Report
+
+-   Open reports folder through <project_folder>/reports/html
+-   Open the index.html file in browser
+
+
+### Who do I talk to?
+
+-   Mahesh D (mahesh.dm19@gmail.com)
+#
