@@ -1,5 +1,6 @@
 const { generate } = require('multiple-cucumber-html-reporter');
 const { removeSync } = require('fs-extra');
+const cucumberJSON = require('wdio-cucumberjs-json-reporter');
 
 export const config = {
     //
@@ -62,6 +63,15 @@ export const config = {
         maxInstances: 5,
         //
         browserName: 'chrome',
+        'goog:chromeOptions': {
+            args: [
+                '--headless',
+                '--incognito',
+                '--disable-extensions',
+                '--disable-gpu',
+                '--no-sandbox'
+            ]
+        },
         acceptInsecureCerts: true
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
@@ -276,8 +286,9 @@ export const config = {
      * @param {number}             result.duration  duration of scenario in milliseconds
      * @param {Object}             context          Cucumber World object
      */
-    // afterStep: function (step, scenario, result, context) {
-    // },
+    async afterStep() {
+        cucumberJSON.default.attach(await browser.takeScreenshot(), 'image/png');    
+    },
     /**
      *
      * Runs after a Cucumber Scenario.

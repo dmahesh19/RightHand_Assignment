@@ -14,27 +14,33 @@ When(/^I fill the credentials with "([^"]*)?" and "([^"]*)?" and login$/, async 
 
 When(/^I click on "([^"]*)?" button$/, async (action) => {
     if(action == "sorting"){
-        saucelabsInventoryPage.sort("za")
+        await saucelabsInventoryPage.sort("za")
     }
     if(action == "continueshoping"){
-        SaucelabsCartPage.continueshopping()
+        await SaucelabsCartPage.continueshopping()
     }
     if(action == "checkout"){
-        SaucelabsCartPage.checkout()
+        await SaucelabsCartPage.checkout()
     }
 });
 
 When(/^I add "([^"]*)?"$/, async (item) => {
-    saucelabsInventoryPage.addItem(item)
+    await saucelabsInventoryPage.addItem(item)
 });
 
 When(/^I go to cart$/, async () => {
-    saucelabsInventoryPage.cart()
+    await saucelabsInventoryPage.cart()
 });
 
 When(/^I fill address with "([^"]*)?" "([^"]*)?" "([^"]*)?"$/, async (fname,lname,zip) => {
-    SaucelabsCheckoutPage.fillform(fname,lname,zip)
+    await SaucelabsCheckoutPage.fillform(fname,lname,zip)
 });
+
+Then(/^I should get successful response$/, async () => {
+    await console.log("TestCase Passed")
+    await SaucelabsCheckoutPage.complete
+});
+
 
 
 

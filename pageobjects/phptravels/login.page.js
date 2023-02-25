@@ -17,19 +17,19 @@ class PHPLoginPage {
     }
 
     get firstNumberField(){
-        return $('//*[@id="numb1"]')
+        return $("//span[@id='numb1']")
     }
 
     get secondNumberField(){
-        return $('//*[@id="numb2"]')
+        return $("//span[@id='numb2']")
     }
 
     get answerField(){
-        return $('//*[@id="number"]')
+        return $("//input[@id='number']")
     }
 
     get submitButtonField(){
-        return $('//*[@id="demo"]')
+        return $("//button[@id='demo']")
     }
 
     async fillRequestForm(fname, lname, bname, email){
@@ -41,7 +41,9 @@ class PHPLoginPage {
 
     async fillSecurityForm(){
         let n1 = await this.firstNumberField.getValue()
+        console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@FN"+n1)
         let n2 = await this.secondNumberField.getValue()
+        console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@SN"+n2)
         let fn = n1 + n2
         await this.answerField.setValue(fn)
     }

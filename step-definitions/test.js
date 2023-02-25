@@ -9,7 +9,7 @@ http_request_header['header_name'] = 'multipart/form-data';
 
 let config = {
     headers: {
-        'content-type' : http_request_header['header_name'],
+        'content-type' : 'multipart/form-data',
     }
 }
 
@@ -24,12 +24,12 @@ form1.append('email', 'mahesh.test@gmail.com');
 
 url_temp1 = 'https://phptravels.com/hubspot'
 
-global_general_variables['response_full1'] = axios.get(url_temp1, form1, config)
+global_general_variables['response_full1'] = await axios.post(url_temp1, form1, config)
 
-//console.log(global_general_variables['response_full1'])
+console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+global_general_variables['response_full1'])
 
-fs.writeFile('newfile.txt', JSON.stringify(global_general_variables['response_full1'].formData()), function (err) {
-    if (err) throw err;
-    console.log('File is created successfully.');
-  });
-  */
+//fs.writeFile('newfile.txt', JSON.stringify(global_general_variables['response_full1'].formData()), function (err) {
+//    if (err) throw err;
+//    console.log('File is created successfully.');
+//  })
+*/
