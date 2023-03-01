@@ -1,7 +1,7 @@
 class SaucelabsInventoryPage {
 
     get sortField(){
-        return $('//*[@id="header_container"]/div[2]/div[2]/span/select')
+        return $("//select[@class='product_sort_container']")
     }
 
     get backpackItemField(){

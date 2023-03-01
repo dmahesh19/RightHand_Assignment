@@ -1,6 +1,7 @@
 const { generate } = require('multiple-cucumber-html-reporter');
 const { removeSync } = require('fs-extra');
 const cucumberJSON = require('wdio-cucumberjs-json-reporter');
+const reportGenerationTime = new Date().toISOString();
 
 export const config = {
     //
@@ -351,6 +352,14 @@ export const config = {
             pageTitle: 'Right Hand Assignment HTML Reports',
             reportName: 'Right Hand Assignment Automation Test Results',
             displayDuration: true,
+            pageFooter: '<div><p>Rights reserved to Mahesh</p></div>',
+            customData: {
+                title: 'Test Run info',
+                data: [
+                    { label: 'Project', value: 'Right Hand Assignment' },
+                    { label: 'Report Generation Time', value: `${reportGenerationTime}`}
+                ]
+            }
         });
     }
     /**
